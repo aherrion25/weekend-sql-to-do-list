@@ -32,7 +32,7 @@ The goal of this project is to develop a full-stack application that can contain
 - [x] `npm` install express and pg
 - [x] create base template for honey-do list
 - [x] create database for honey-do list via postgresql
-- [] set up click handles for add and remove button
+- [x] set up click handles for add and remove button
 - [x] create 'GET' to display database to DOM
 - [x] create 'POST' routes to take in data to database
 - [] create 'PUT' for honey-do list
