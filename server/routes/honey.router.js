@@ -13,6 +13,21 @@ router.get('/', (req, res) => {
     });
 });
 
+// POST all new task to database
+router.post('/', (req, res) => {
+    const taskToAdd = req.body;
+    const queryText = `INSERT INTO "task" ("honey_do", "completed")
+    VALUES ($1, $2);`
+    pool.query(queryText, [taskToAdd.honey_do, taskToAdd.completed])
+        .then((results) => {
+            console.log(results);
+            res.send(results)
+        }).catch((error) => {
+            console.log('ERROR in POST /honeyList', error);
+            res.sendStatus(500)
+        })
+});
+
 
 
 

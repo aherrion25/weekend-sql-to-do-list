@@ -30,21 +30,22 @@ function getTask() {
         console.log(error);
         alert('Something went wrong!')
     })
-}
-
-
-
-
-
-
-
-
-
-
-
-
+} // End getTask
 
 // function for POST request
 function honeyDo () {
     console.log('in honeyDo');
-} // End newTask
+    $.ajax({
+        type: 'POST',
+        url: '/honeylist',
+        data: {
+            honey_do: $('#task-input').val(),
+            completed: false,
+        }
+    }).then(function(response) {
+        getTask();
+    }).catch(function(error) {
+        console.log(error);
+        alert('Something went wrong!')
+    });
+} // End honeyDo
