@@ -6,3 +6,5 @@ CREATE TABLE "task"(
 
 INSERT INTO "task" ("honey_do", "completed")
 VALUES ('Do laundry', false),('mow lawn', false);
+
+SELECT * FROM "task" ORDER BY "completed";
