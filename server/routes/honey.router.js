@@ -24,9 +24,22 @@ router.post('/', (req, res) => {
             res.send(results)
         }).catch((error) => {
             console.log('ERROR in POST /honeyList', error);
-            res.sendStatus(500)
+            res.sendStatus(500);
         })
 });
+
+// DELETE completed task from list
+router.delete('/:id', (req, res) => {
+    const taskId = req.params.id;
+    const queryText = 'DELETE FROM "task" WHERE "id" = $1;';
+    pool.query(queryText, [taskId])
+        .then((results) => {
+            res.sendStatus(200);
+        }).catch((error) => {
+            console.log(error);
+            res.sendStatus(500);
+        })
+})
 
 
 

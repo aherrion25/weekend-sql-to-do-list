@@ -36,6 +36,6 @@ The goal of this project is to develop a full-stack application that can contain
 - [x] create 'GET' to display database to DOM
 - [x] create 'POST' routes to take in data to database
 - [] create 'PUT' for honey-do list
-- [] create 'DELETE' for honey-do list
+- [x] create 'DELETE' for honey-do list
 - [] Make it fancy (CSS)
 Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).

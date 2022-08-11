@@ -8,3 +8,5 @@ INSERT INTO "task" ("honey_do", "completed")
 VALUES ('Do laundry', false),('mow lawn', false);
 
 SELECT * FROM "task" ORDER BY "completed";
+
+DELETE FROM "task" WHERE "id" = 5;
