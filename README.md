@@ -28,10 +28,10 @@ The goal of this project is to develop a full-stack application that can contain
         - [x] routes folder with honey.router.js file
         - [x] modules folder with pool.js file
     - [x]  create a Server.js file
-- [] database.sql file
-- [] `npm` install express and pg
-- [] create base template for honey-do list
-- [] create database for honey-do list via postgresql
+- [x] database.sql file
+- [x] `npm` install express and pg
+- [x] create base template for honey-do list
+- [x] create database for honey-do list via postgresql
 - [] set up click handles for add and remove button
 - [] create 'GET' to display database to DOM
 - [] create 'POST' routes to take in data to database
