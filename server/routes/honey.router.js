@@ -28,6 +28,20 @@ router.post('/', (req, res) => {
         })
 });
 
+
+
+// PUT changes the value for false to true when completed
+router.put('/:id',(req, res) => {
+    const taskId = req.params.id;
+    const queryText = 'UPDATE "task" SET "completed" = true WHERE "id" = $1;'
+    pool.query(queryText, [taskId]).then(function(results){
+        res.sendStatus(200);
+    }).catch((error) => {
+        console.log('ERROR in PUT /honeyList', error);
+        res.sendStatus(500);
+    })
+})
+
 // DELETE completed task from list
 router.delete('/:id', (req, res) => {
     const taskId = req.params.id;

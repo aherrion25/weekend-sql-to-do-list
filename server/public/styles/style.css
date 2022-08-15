@@ -1,5 +1,30 @@
 html,body{
     margin: 0;
     padding: 0;
-    font-family: 'Mouse Memoirs', sans-serif;;
+    font-family: 'Mouse Memoirs', sans-serif;
+    background-color: #BF702A;
+}
+
+header{
+    margin: 5px;
+    padding: 8px;
+    background-color: #8C1616 ;
+    text-align: center;
+    font-size: 28px;
+}
+
+table{
+    border-collapse:separate;
+    border-style: groove;
+    width: 100%;
+}
+
+th,td{
+    text-align: left;
+    padding: 10px;
+    border-style: double;
+}
+
+.hidden{
+    display: none;
 }
