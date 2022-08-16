@@ -35,7 +35,6 @@ function getTask() {
                     
                         <button class="${taskDone}" data-id="${list.id}"> Remove task</button>
                 </tr>
-            
             `)
         }
     }).catch(function(error){
