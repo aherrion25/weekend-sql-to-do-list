@@ -7,7 +7,7 @@ function readyNow() {
     console.log('in readyNow');
     $('#add-button').on('click', honeyDo);
     $('body').on('click', '.task-delete', deleteTask);
-    $('body').on('click','.complete-button',getTask)
+    $('body').on('click', '.complete-button',taskDone)
     getTask();
 } // End readyNow
 
@@ -23,16 +23,7 @@ function getTask() {
             let taskDone = 'task-delete';
             let taskCompleted = 'complete-button'
             if(list.completed === true){
-                $('#table-body').append(`
-                    <tr>
-                        <td>${list.honey_do}</td>
-                        <td>
-                       ${list.completed} <button class="${taskCompleted}" data-id="${list.id}">Completed</button>
-                        </td>
-                    
-                    </tr>
-                
-                `)
+                taskCompleted = 'hidden';
             }
             else if(list.completed === false){
                 taskDone = 'hidden';
@@ -40,7 +31,7 @@ function getTask() {
             $('#table-body').append(`
                 <tr>
                     <td>${list.honey_do}</td>
-                    <td>${list.completed}<td>
+                    <td>${list.completed}  <button class="${taskCompleted}" data-id="${list.id}">Completed</button><td>
                     
                         <button class="${taskDone}" data-id="${list.id}"> Remove task</button>
                 </tr>

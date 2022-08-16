@@ -19,10 +19,20 @@ table{
     width: 100%;
 }
 
+th{
+    background-color: #BF702A;
+    color:black;
+}
+
 th,td{
     text-align: left;
     padding: 10px;
     border-style: double;
+}
+
+tr:nth-child(odd){
+    background-color: #8C3A1C;
+    color: white;
 }
 
 .hidden{
